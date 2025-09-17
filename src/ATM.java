@@ -3,7 +3,7 @@ public class ATM {
     public ATM(){
         this.balance=0;
     }
-    public void  depost(int amount ) {
+    public void deposit(int amount ) {
         if (amount > 0) {
             balance += amount;
             System.out.println("Deposited $" + amount + " in cash. New balance: $" + balance);
@@ -40,28 +40,28 @@ public class ATM {
         System.out.println("Initial balance: $" + atm.getBalance());
         System.out.println();
 
-        // Deposit using cash
+
         atm.deposit(100);
 
-        // Deposit using check
+
         atm.deposit("CHK123456", 250);
 
-        // Deposit using mobile transfer
+
         atm.deposit("+1-555-0123", 75.50);
 
         System.out.println();
         System.out.println("Final balance: $" + atm.getBalance());
 
-        // Additional examples with edge cases
+
         System.out.println("\n--- Additional Examples ---");
 
-        // Invalid cash deposit
+
         atm.deposit(-50);
 
-        // Invalid check deposit
+
         atm.deposit("", 100);
 
-        // Invalid mobile transfer
+
         atm.deposit(null, 50.0);
     }
 
